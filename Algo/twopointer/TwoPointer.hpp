@@ -37,11 +37,15 @@ class TwoPointer
         int threeSumClosest(std::vector<int>& nums, int target);
         int threeSumSmaller(std::vector<int>& nums, int target);
         ListNode* reverseBetween(ListNode* head, int m, int n);
+        int bagOfTokensScore(std::vector<int>& tokens, int P);
 
 
 
 
 };
+
+
+
 
 #include "TwoPointer.cpp"
 #endif // __TWOPOINTER_HPP__

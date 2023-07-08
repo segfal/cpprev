@@ -152,3 +152,24 @@ int TwoPointer::threeSumSmaller(std::vector<int>& nums, int target)
     return res;
 }
 
+
+
+
+int TwoPointer::bagOfTokensScore(std::vector<int>& tokens, int P){
+    std::sort(tokens.begin(), tokens.end());
+    int res = 0, points = 0, i = 0, j = tokens.size() - 1;
+    while(i <= j){
+        if(P >= tokens[i]){
+            P -= tokens[i++];
+            res = std::max(res, ++points);
+        }
+        else if(points > 0){
+            points--;
+            P += tokens[j--];
+        }
+        else{
+            break;
+        }
+    }
+    return res;
+}
