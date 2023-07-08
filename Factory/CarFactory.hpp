@@ -104,6 +104,4 @@ class CarStore
 
 
 
-
-
 #endif // __CARFACTORY_HPP__

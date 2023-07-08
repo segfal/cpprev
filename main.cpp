@@ -8,11 +8,15 @@
 #include <stack>
 #include <sstream>
 #include <cmath>
-#include "Box/box.hpp"
-
-
+#include "Factory/CarFactory.hpp"
 
 int main(){
+    CarFactory* carFactory = new BenzCarFactory();
+    Car* car = carFactory->createCar();
+    car->print();
+    delete car;
+    delete carFactory;
+    return 0;
 
     
     
